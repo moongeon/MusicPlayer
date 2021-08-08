@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/musicPlayer"
+        android:name="com.example.musicplayer.view.MusicPlayer"
+        android:label="music_player_fragment"
+        tools:layout="@layout/music_player_fragment" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.musicplayer.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_musicPlayer"
+            app:destination="@id/musicPlayer" />
+    </fragment>
+</navigation>
